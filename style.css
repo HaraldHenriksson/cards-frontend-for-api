@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'DM Mono', monospace;
+}
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+}
+
+.card {
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: 1rem 0 3rem #000;
+}
+
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+}
+
+.author-avatar img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin: 16px 10px;
+}
