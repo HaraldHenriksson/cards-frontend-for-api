@@ -6,20 +6,15 @@ export const fetchProducts = async () => {
 
   const result = await res.json();
 
+  console.log(result.data);
   return result.data;
 };
 
-// let products = fetchProducts();
+const renderProducts = (array) => {
+  let productCards = "";
 
-// const getProducts = async () => {
-//   products = await fetchProducts();
-// };
-
-const renderProducts = () => {
-  const productList = fetchProducts();
-
-  const productCards = productList.map((product) => {
-    return `
+  array.forEach((product) => {
+    productCards += `
         <article class="card">
           <header class="card-header">
             <h2>${product.name}</h2>
@@ -33,17 +28,13 @@ const renderProducts = () => {
   
           <div class="tags">
             <div>${product.description}</div>
-            <h2>${product.price}</h2>
+            <h2>${product.price} kr</h2>
           </div>
         </article>
       `;
   });
 
-  document.querySelector("#theCard").innerHTML = productCards.join("");
+  document.querySelector("#theCard").innerHTML = productCards;
 };
 
-//renderProducts();
-
-// fetchProducts();
-
-console.log(result);
+fetchProducts().then((data) => renderProducts(data));
