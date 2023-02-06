@@ -1,5 +1,5 @@
 export const fetchProducts = async () => {
-  const res = await fetch("http://localhost:3000/product");
+  const res = await fetch("https://fine-red-stingray-garb.cyclic.app/product");
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`);
   }
@@ -17,7 +17,7 @@ const renderProducts = (array) => {
     productCards += `
         <article class="card">
           <header class="card-header">
-            <h2>${product.name}</h2>
+            <h1>${product.name}</h1>
           </header>
   
           <div class="card-author">
@@ -25,9 +25,9 @@ const renderProducts = (array) => {
               <img src="${product.images.thumbnail}" />
             </a>
           </div>
-  
+          
           <div class="tags">
-            <div>${product.description}</div>
+            <h1>${product.description}</h1>
             <h2>${product.price} kr</h2>
           </div>
         </article>

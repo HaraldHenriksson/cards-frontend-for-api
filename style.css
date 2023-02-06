@@ -8,9 +8,20 @@ body {
     font-family: 'DM Mono', monospace;
 }
 
+h2 {
+    font-size: small;
+}
+
+h1 {
+    font-size: medium;
+}
+
 .card-list {
     display: flex;
-    padding: 3rem;
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .card {
@@ -18,9 +29,8 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 350px;
-    width: 400px;
-    min-width: 250px;
-    padding: 1.5rem;
+    width: 350px;
+    padding: 3rem;
 }
 
 .card {
@@ -29,17 +39,10 @@ body {
     box-shadow: 1rem 0 3rem #000;
 }
 
-.card-author {
-    position: relative;
-    display: grid;
-    grid-template-columns: 75px 1fr;
-    align-items: center;
-}
-
 .author-avatar img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     filter: grayscale(100%);
     margin: 16px 10px;
