@@ -28,6 +28,7 @@ h1 {
     flex-direction: column;
     min-width: 250px;
     padding: 1.5rem;
+    margin-left: -130px;
 }
 
 .card {
@@ -43,11 +44,6 @@ h1 {
 
 .card:hover~.card {
     transform: translateX(130px);
-}
-
-
-.card:not(:first-child) {
-    margin-left: -130px;
 }
 
 .author-avatar img {
