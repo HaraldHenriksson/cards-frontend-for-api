@@ -1,5 +1,5 @@
 export const fetchProducts = async () => {
-  const res = await fetch("https://fine-red-stingray-garb.cyclic.app/product");
+  const res = await fetch("https://fine-red-stingray-garb.cyclic.app/products");
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`);
   }
